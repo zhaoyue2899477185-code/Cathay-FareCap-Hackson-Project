@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#00564f" />
+    <title>Cathay Fare Cap Demo</title>
+    <link rel="stylesheet" href="styles.css?v=3" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="top-strip">Demo experience · Offline fares · HKD</div>
+      <div class="header-inner">
+        <button id="brandButton" class="brand" type="button" aria-label="Cathay Fare Cap demo home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none">
+              <path d="M3 17.4 24.6 5.8l-3.9 15.2-6-4.8-3.5 4.6-1.1-7L3 17.4Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="brand-word">CATHAY</span>
+          <span class="demo-pill">Demo</span>
+        </button>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <button id="navFares" class="nav-link is-active" type="button">Book</button>
+          <button id="navAccount" class="nav-link" type="button">My account</button>
+        </nav>
+
+        <button id="headerAccount" class="account-chip" type="button" aria-label="Open demo account">
+          <span class="avatar">DM</span>
+          <span class="account-chip-text">
+            <span>Demo member</span>
+            <strong id="headerMiles">0 miles</strong>
+          </span>
+          <span class="chevron" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="m7 4 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="faresView" class="view">
+        <div class="page-band">
+          <div class="page-band-inner">
+            <div class="page-intro">
+              <p class="eyebrow">Fare protection</p>
+              <h1>Protect your fare.</h1>
+              <p class="page-subtitle">Set your protected price and pay a small fee. If the fare rises above it, you receive Asia Miles.</p>
+            </div>
+            <div class="demo-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Settlement opens immediately in this demo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <label class="select-field" for="destinationFilter">
+              <span>Destination</span>
+              <select id="destinationFilter">
+                <option value="ALL">All destinations</option>
+                <option value="TYO">Tokyo</option>
+                <option value="TPE">Taipei</option>
+                <option value="BKK">Bangkok</option>
+                <option value="SIN">Singapore</option>
+              </select>
+            </label>
+            <div class="result-summary">
+              <strong id="resultCount">30</strong>
+              <span>fares available</span>
+            </div>
+          </div>
+        </div>
+
+        <section id="flightList" class="flight-list" aria-label="Available flights"></section>
+      </section>
+
+      <section id="accountView" class="view is-hidden">
+        <div class="account-band">
+          <div class="account-band-inner">
+            <div class="profile-block">
+              <div class="profile-avatar">DM</div>
+              <div>
+                <p class="eyebrow eyebrow-light">Cathay member</p>
+                <h1>Demo Member</h1>
+                <p class="profile-meta">Membership no. 1234 5678</p>
+              </div>
+            </div>
+            <div class="miles-pool">
+              <p class="eyebrow eyebrow-light">Asia Miles pool</p>
+              <p id="milesPool" class="miles-total">0</p>
+              <p class="miles-caption">miles earned from fare protection</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="account-body">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Protection records</p>
+              <h2>Your fare caps</h2>
+            </div>
+            <span id="recordCount" class="count-badge">0 records</span>
+          </div>
+
+          <div id="recordsList"></div>
+
+          <div class="account-footer">
+            <div class="account-footer-copy">
+              <strong>Switch demo account</strong>
+              <p>Clear all protection records and miles for a fresh demo member.</p>
+            </div>
+            <button id="resetDemo" class="button button-secondary" type="button">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 11a8 8 0 1 0-2.3 5.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M20 5v6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Refresh demo account
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Cathay Fare Cap Demo</span>
+      <span>Offline prototype. No real payment, ticket, or mileage is issued.</span>
+    </footer>
+
+    <div id="modalRoot"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="data.js?v=3"></script>
+    <script src="app.js?v=7"></script>
+  </body>
+</html>
