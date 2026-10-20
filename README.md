@@ -23,8 +23,7 @@ The demo is a static offline site with 30 simulated flights. It uses `localStora
 |---|---|
 | `demo/` | Runnable demo: HTML, CSS, JavaScript, offline flight data |
 | `model.md` | Complete formal model |
-| `dataset/` | Dataset inventory, core calibrated data and source observations|
-| `source-mapping.md` | Official source mapping |
+| `dataset/` | Dataset inventory, source mapping, core calibrated data and source observations|
 | `construction-process.md` | Calibration and construction process |、
 | `scripts/` | Core calibration scripts |
 
