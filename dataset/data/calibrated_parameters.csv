@@ -1,0 +1,15 @@
+parameter,value,unit,status,method_or_source
+T_s,72,hours,official,Cathay Hold Your Fare terms
+rho,1.0,dimensionless,policy,Full miles coverage up to C
+kappa,0.03,ratio,policy,K/P1 affordability cap
+lambda,0.10,dimensionless,calibrated,Risk margin approximately 0.5% of P1
+v_m,0.11,HKD/mile,calibrated,Mean net award value across five official route examples
+c_m,0.08,HKD/mile,proxy,0.740 loyalty recognition/deferral ratio applied to v_m and rounded down
+c_a + c_f,0.005*P1,HKD,policy,Claims and fixed operating load
+pi,0.005*P1,HKD,policy,Target profit per policy
+price_distribution,lognormal,dimensionless,calibrated,Mean-preserving lognormal terminal price model
+sigma_72,route-specific,log-return,calibrated,Daily adjacent log change scaled by sqrt(3)
+C,route-specific,HKD,calibrated,95th percentile positive increase capped at 60% of P1
+P_min,route-specific,HKD,calibrated,Smallest integer P0 with K(P0)<=3% P1
+P_max,route-specific,HKD,calibrated,99th percentile simulated price capped at 2.0 P1
+M_max,C/v_m,miles,derived,Maximum payout at the compensable-difference cap
