@@ -8,6 +8,10 @@ Hackathon prototype for an airline fare-protection product. A passenger pays a p
 
 ## Demo
 
+Live demo: <https://zhaoyue2899477185-code.github.io/Cathay-FareCap-Hackson-Project/>
+
+To run it locally:
+
 ```powershell
 cd demo
 python -m http.server 4173 --bind 127.0.0.1
